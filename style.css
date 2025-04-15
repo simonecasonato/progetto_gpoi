@@ -6,8 +6,12 @@ nav{
     background-color: rgb(42, 75, 42);
 }
 
+.card{
+    background-color: rgb(42, 75, 42);
+    color: lightgrey;
+}
 
 .nav-link{
     font-weight:400;
-    color: white;
+    color: lightgrey;
 }
