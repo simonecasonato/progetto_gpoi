@@ -1,107 +1,193 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>GPTrainer</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="/imgs/icona.png">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg sticky-top mb-2" >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#" style="color:white;">GPTrainer</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav d-flex ">
-                  
-                  <div class="d-flex ">
-                    <li class="nav-item">
-                      <a class="nav-link " aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Servizi</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="">About us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contatti</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Recensioni</a>
-                    </li>
-                  </div>
+<html lang="it">
 
-                </ul>
-                  <div class="d-flex ">
-                    <form class="container-fluid justify-content-start ">
-                      <a href="register.html" class="btn btn-outline-secondary">Registrati</a>
-                      <a href="" class="btn btn-outline-secondary">Accedi</a>
-                    </form>
-                  </div>
-                  
-              </div>
-            </div>
-        </nav>
-        <div id="aboutUs">
-          <p></p>
+<head>
+  <title>GPTrainer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/imgs/icona.png">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home" style="color:white;">GPTrainer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav d-flex ">
+
+          <div class="d-flex ">
+            <li class="nav-item">
+              <a class="nav-link " href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servizi">Servizi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutUs">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatti" data-i18n="navContatti">Contatti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recensioni</a>
+            </li>
+          </div>
+
+        </ul>
+        <div class="d-flex ">
+          <div>
+
+            <select id="languageSwitcher" class="form-select  w-auto" w>
+              <option value="it">IT</option>
+              <option value="en">EN</option>
+            </select>
+          </div>
+          <form class="container-fluid justify-content-start ">
+            <a href="register.html" class="btn btn-outline-secondary">Registrati</a>
+            <a href="" class="btn btn-outline-secondary">Accedi</a>
+          </form>
         </div>
-        <div id="">
-          <div class="d-flex justify-content-around">
-            <div class="card" style="width: 18rem;">
-              <img src="/imgs/foto1.png" class="card-img-top rounded" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Maria</h5>
-                <p class="card-text">cardio</p>
-                
-              </div>
-              <div class="card-footer d-flex justify-content-around">
-                <a href="#" class="btn btn-outline-secondary">Prenota</a>
-              </div>
+
+      </div>
+    </div>
+  </nav>
+  <div id="home" class="container-fluid  ">
+
+    <div id="aboutUs">
+      <div class="container ">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Chi siamo</h2>
+            <div>
+              <p class="text-center">GPTrainer è una palestra innovativa che unisce intelligenza artificiale,
+                allenamento fisico e
+                benessere personale. Fondata con l’obiettivo di rivoluzionare il mondo del fitness, GPTrainer
+                offre un'esperienza unica, grazie a programmi di allenamento personalizzati monitorati da
+                personal trainer virtuali che si adattano ai progressi individuali. La palestra è dotata di
+                attrezzature moderne e tecnologie avanzate, che ottimizzano l’efficacia e la sicurezza degli
+                allenamenti. Inoltre, GPTrainer promuove il benessere mentale con spazi dedicati a yoga,
+                meditazione e relax, creando un ambiente completo per il corpo e la mente. La missione di
+                GPTrainer è aiutare ogni membro a raggiungere i propri obiettivi, combinando tecnologia e
+                cura del benessere per risultati straordinari.</p>
             </div>
 
-            <div class="card" style="width: 18rem;">
-              <img src="/imgs/foto2.png" class="card-img-top rounded" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Antonio</h5>
-                <p class="card-text">corpo libero</p>
-                
-              </div>
-              <div class="card-footer d-flex justify-content-around">
-                <a href="#" class="btn btn-outline-secondary">Prenota</a>
-              </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-              <img src="/imgs/foto3.png" class="card-img-top rounded" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Susanna</h5>
-                <p class="card-text">yoga</p>
-                
-              </div>
-              <div class="card-footer d-flex justify-content-around">
-                <a href="#" class="btn btn-outline-secondary">Prenota</a>
-              </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-              <img src="/imgs/foto4.png" class="card-img-top rounded" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Alberto</h5>
-                <p class="card-text">pesi</p>
-
-              </div>
-              <div class="card-footer d-flex justify-content-around">
-                <a href="#" class="btn btn-outline-secondary">Prenota</a>
-              </div>
-            </div>
-
-           
-        </div>
-        <div id="">
+          </div>
 
         </div>
-    </body>
+      </div>
+    </div>
+
+    <div id="servizi">
+      <div class="container d-flex justify-content-between mt-4">
+        <div class="card" style="width: 18rem;">
+          <img src="/imgs/foto1.png" class="card-img-top rounded" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Maria</h5>
+            <p class="card-text">Specializzata in CrossFit, Maria
+              motiva i suoi clienti a superare
+              ogni limite con allenamenti ad alta
+              intensità che combinano
+              sollevamento pesi, ginnastica e
+              cardio. La sua attenzione alla
+              tecnica e alla varietà degli esercizi
+              permette di ottenere progressi
+              costanti, migliorando resistenza,
+              potenza e mobilità.</p>
+
+          </div>
+          <div class="card-footer d-flex justify-content-around">
+            <a href="#" class="btn btn-outline-secondary">Prenota</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="/imgs/foto2.png" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Antonio</h5>
+            <p class="card-text">Esperto di powerlifting,
+              Antonio è specializzato nel
+              miglioramento della forza
+              massimale, concentrandosi su
+              squat, panca e stacco da terra.
+              Con un approccio metodico e
+              orientato ai risultati, Antonio
+              perfeziona la tecnica dei suoi
+              clienti per massimizzare le
+              prestazioni e prevenire infortuni.</p>
+
+          </div>
+          <div class="card-footer d-flex justify-content-around">
+            <a href="#" class="btn btn-outline-secondary">Prenota</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="/imgs/foto3.png" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Susanna</h5>
+            <p class="card-text">Insegnante di yoga, Susanna guida
+              i suoi clienti in pratiche che
+              migliorano la flessibilità, la forza e
+              il benessere mentale. Con una
+              conoscenza profonda delle asana,
+              della respirazione e della
+              meditazione, Susanna offre
+              sessioni personalizzate che
+              promuovono un equilibrio olistico
+              tra corpo e mente.</p>
+
+          </div>
+          <div class="card-footer d-flex justify-content-around">
+            <a href="#" class="btn btn-outline-secondary">Prenota</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="/imgs/foto4.png" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Alberto</h5>
+            <p class="card-text">Con oltre 10 anni di esperienza nel
+              bodybuilding, Alberto aiuta i suoi clienti a
+              costruire massa muscolare e forza con un
+              approccio tecnico e motivante. È esperto
+              nelle competizioni di bodybuilding e offre
+              programmi personalizzati che ottimizzano
+              i risultati, sia per la massa che per la
+              definizione muscolare.</p>
+
+          </div>
+          <div class="card-footer d-flex justify-content-around">
+            <a href="#" class="btn btn-outline-secondary">Prenota</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="contatti" class="container mt-2">
+        <h2>Contatti</h2>
+        <ul class="list-group list-group-flush rounded">
+          <li class="list-group-item">+39 451 659 8575</li>
+          <li class="list-group-item">www.GPTrainer.com</li>
+          <li class="list-group-item">gptrainer@gmail.com</li>
+          <li class="list-group-item">Via Paolo X 33, VI, 36078</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <footer class="text-center mt-4">
+      <p>&copy; 2025 GPTrainer. Tutti i diritti riservati.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gybB+8e5c5d"></script>
+      <script src="script.js"></script>
+</body>
+
 </html>
