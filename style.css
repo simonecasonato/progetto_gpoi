@@ -1,29 +1,29 @@
 body{
-    background-color: rgb(53, 95, 53);
+    background-color: rgb(53, 122, 53);
 }
 
 nav{
-    background-color: rgb(42, 75, 42);
+    background-color: rgb(67, 155, 67);
 }
 
 .card{
-    background-color: rgb(42, 75, 42);
-    color: lightgrey;
+    background-color: rgb(67, 155, 67);
+    color: white;
 }
 
 .nav-link{
     font-weight:400;
-    color: lightgrey;
+    color: white;
 }
 
 .list-group-item{
-    background-color: rgb(42, 75, 42);
-    color: lightgrey;
+    background-color: rgb(67, 155, 67);
+    color: white;
 }
 
 p{
-    color: lightgrey;
+    color: white;
 }
 h2{
-    color: lightgrey;
+    color: white;
 }
