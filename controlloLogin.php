@@ -17,7 +17,7 @@ if(isset($_POST['invio'])) {
                     $pass=MD5($_POST['password']);
                     $email=$_POST['email'];
                     
-                    $sql="SELECT ID_utente FROM utente WHERE email='$email';";
+                    $sql="SELECT ID_utente FROM utente WHERE email='$email' AND nome ='$nome' AND nome ='$cognome' AND nome ='$pass';";
                     
                     $conn = mysqli_connect('localhost','root','','progetto_gpoi')or die ("error: cannot connect");
                     
@@ -31,7 +31,7 @@ if(isset($_POST['invio'])) {
                         $_SESSION['cognome'] = $cognome;
                         echo"<h3>Accesso effettuato</h3>";
                         echo"<h3>Bentornato $nome $cognome</h3>";
-                        echo"<h4>Clicca per prenotare la tua lezione <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>prenota</a></h4>";
+                        echo"<h4>Clicca per prenotare la tua lezione <a href='prenotazione.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>prenota</a></h4>";
                     }else{
                         echo"<h2>Errore di accesso :(</h2>";
                         echo"<h3>L'utente non risulta registrato</h3>";
@@ -56,5 +56,4 @@ if(isset($_POST['invio'])) {
         
             
     </body>
-    </html>
-    
+</html>
