@@ -17,7 +17,7 @@ if(isset($_POST['invio'])) {
                     $pass=MD5($_POST['password']);
                     $email=$_POST['email'];
                     
-                    $sql="SELECT ID_utente FROM utente WHERE email='$email' AND nome ='$nome' AND nome ='$cognome';";
+                    $sql="SELECT ID_utente FROM utente WHERE email='$email' AND nome ='$nome' AND cognome ='$cognome';";
                     
                     $conn = mysqli_connect('localhost','root','','progetto_gpoi')or die ("error: cannot connect");
                     
