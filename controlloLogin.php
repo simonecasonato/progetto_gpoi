@@ -17,7 +17,7 @@ if(isset($_POST['invio'])) {
                     $pass=MD5($_POST['password']);
                     $email=$_POST['email'];
                     
-                    $sql="SELECT ID_utente FROM utente WHERE email='$email' AND nome ='$nome' AND nome ='$cognome' AND nome ='$pass';";
+                    $sql="SELECT ID_utente FROM utente WHERE email='$email' AND nome ='$nome' AND cognome ='$cognome' AND pwd ='$pass';";
                     
                     $conn = mysqli_connect('localhost','root','','progetto_gpoi')or die ("error: cannot connect");
                     
@@ -29,6 +29,7 @@ if(isset($_POST['invio'])) {
                         $_SESSION['pwd'] = $pass;
                         $_SESSION['nome'] = $nome;
                         $_SESSION['cognome'] = $cognome;
+                        $_SESSION['id_utente']=$result;
                         echo"<h3>Accesso effettuato</h3>";
                         echo"<h3>Bentornato $nome $cognome</h3>";
                         echo"<h4>Clicca per prenotare la tua lezione <a href='prenotazione.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>prenota</a></h4>";
