@@ -34,3 +34,15 @@ LEFT JOIN coach_ia AS c
 	ON rc.id_coach=c.ID_coach
 
 --trova tutte le recensioni stampando anche nome del utente e del coach
+
+SELECT u.nome,c.nome,c.sport,tr.prezzo,tr.tipo
+FROM `prenota` AS pr
+LEFT JOIN utente AS u
+	ON pr.ID_utente=u.ID_utente
+LEFT JOIN coach_ia as c
+	ON pr.ID_coach=c.ID_coach
+LEFT JOIN tariffa AS tr
+	ON pr.ID_tariffa = tr.ID_tariffa
+WHERE u.ID_utente=2
+
+--trova il nome del utente, il nome del coach, lo sport, il prezzo e il tipo della tariffa per il singolo utente
