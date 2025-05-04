@@ -24,21 +24,22 @@ if(isset($_POST['invio'])) {
                     $result = mysqli_query($conn, $sql) or die ("error: ".mysqli_error($conn)." query was '$sql'");
                     
                     if(mysqli_num_rows($result)>0){
-                        echo"<h3>Utente già esistente</h3>";
-                        echo"<h4>Clicca per accedere <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
+                        echo"<h3 style='color:white;'>Utente già esistente</h3>";
+                        echo"<h4 style='color:white;'>Clicca per accedere <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
                     }else{
                         $sql = "INSERT INTO utente(nome,cognome,pwd,email) VALUES ('$nome','$cognome','$pass','$email');";
                         
                         $result = mysqli_query($conn, $sql) or die ("error: ".mysqli_error($conn)." query was '$sql'");
                         
-                        echo"<h2>Registrazione avvenuta con successo</h2>";
-                        echo"<h3>Benvenuto $nome $cognome</h3>";
-                        echo"<h4>Clicca per accedere <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
+                        echo"<h2 style='color:white;'>Registrazione avvenuta con successo</h2>";
+                        echo"<h3 style='color:white;'>Benvenuto $nome $cognome</h3>";
+                        echo"<h4 style='color:white;'>Clicca per accedere <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
                     }
                 }
             }
         }
     }
+    mysqli_close($conn);
 }    
 ?>
 <!DOCTYPE html>

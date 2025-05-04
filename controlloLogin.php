@@ -23,25 +23,31 @@ if(isset($_POST['invio'])) {
                     
                     $result = mysqli_query($conn, $sql) or die ("error: ".mysqli_error($conn)." query was '$sql'");
                     
+                    
+
                     if(mysqli_num_rows($result)>0){
                         session_start();
+                        $row = mysqli_fetch_assoc($result);
                         $_SESSION['email'] = $email;
                         $_SESSION['pwd'] = $pass;
                         $_SESSION['nome'] = $nome;
                         $_SESSION['cognome'] = $cognome;
-                        $_SESSION['id_utente']=$result;
-                        echo"<h3>Accesso effettuato</h3>";
-                        echo"<h3>Bentornato $nome $cognome</h3>";
-                        echo"<h4>Clicca per prenotare la tua lezione <a href='prenotazione.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>prenota</a></h4>";
+                        $_SESSION['id_utente']=$row['ID_utente'];;
+                        echo"<h3 style='color:white;'>Accesso effettuato</h3>";
+                        echo"<h3 style='color:white;'>Bentornato $nome $cognome</h3>";
+                        echo"<h4 style='color:white;'>Clicca per prenotare la tua lezione <a href='prenotazione.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>prenota</a></h4>";
+                        echo"<h4 style='color:white;'>Clicca per vedere le tue prenotazioni <a href='stampaPrenotazioni.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>vedi</a></h4>";
+                        echo"<h4 style='color:white;'>Clicca per scrivere una recensione <a href='scritturaRecensione.php' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>scrivi</a></h4>";
                     }else{
-                        echo"<h2>Errore di accesso :(</h2>";
-                        echo"<h3>L'utente non risulta registrato</h3>";
-                        echo"<h4>Clicca per registarti <a href='register.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>registrati</a></h4>";
+                        echo"<h2 style='color:white;'>Errore di accesso :(</h2>";
+                        echo"<h3 style='color:white;'>L'utente non risulta registrato</h3>";
+                        echo"<h4 style='color:white;'>Clicca per registarti <a href='register.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>registrati</a></h4>";
                     }
                 }
             }
         }
     }
+    mysqli_close($conn);
 }    
 ?>
 <!DOCTYPE html>

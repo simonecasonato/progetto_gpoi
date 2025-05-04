@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(!isset($_POST['invio'])){
+        
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,7 @@
             <form  method="POST" >
                 <div class="mb-3 text-center">
                     <label for="coach" class="form-label">Coach</label>
-                    <select class="form-select" id="coach">
+                    <select class="form-select" id="coach" name="coach" required onchange="document.getElementById('id_coach').value = this.options[this.selectedIndex].value;">
                         <option selected></option>
                         <?php
                             $connection = mysqli_connect('localhost', 'root', '', 'progetto_gpoi') or die ("ERROR: Cannot connect");
@@ -32,6 +35,7 @@
                             mysqli_close($connection);
                         ?>
                     </select>
+                    <input type="text" class="form-control" id="id_coach" name="id_coach" hidden>
                 </div>
                 <div class="mb-3 text-center">
                     <label for="dataPrenotazione" class="form-label">Data</label>
@@ -41,17 +45,28 @@
             </form>
         </div> 
         <?php
-            $nome = $_SESSION['nome'];
-            $cognome = $_SESSION['cognome'];
-            $email = $_SESSION['email'];
-            $pass = $_SESSION['pwd'];
-            $id_utente = $_SESSION['id_utente'];
-            $id_coach = $_POST['coach'];
-            $data = $_POST['dataPrenotazione'];
-            echo $id_coach;
-            $conn = mysqli_connect('localhost','root','','progetto_gpoi') or die ("error: cannot connect");
-            $sql="INSERT INTO prenota(ID_utente, ID_coach, data_prenotazione) VALUES ('$id_utente',,);";
+    }else{
 
+        $nome = $_SESSION['nome'];
+        $cognome = $_SESSION['cognome'];
+        $email = $_SESSION['email'];
+        $pass = $_SESSION['pwd'];
+        $id_utente = $_SESSION['id_utente'];
+        $id_coach = $_POST['id_coach'];
+        $data = $_POST['dataPrenotazione'];
+        echo $id_coach;
+        $conn = mysqli_connect('localhost','root','','progetto_gpoi') or die ("error: cannot connect");
+        $sql="INSERT INTO prenota(ID_utente, ID_coach, data_prenotazione) VALUES ('$id_utente','$id_coach','$data');";
+        $result = mysqli_query($conn, $sql) or die ("error: ".mysqli_error($conn)." query was '$sql'");
+        if($result){
+            header("Location: prenotazioneOk.html");
+        }else{
+            header("Location: prenotazioneNo.html");
+        }
+
+        
+        mysqli_close($conn);
+    }
         ?>
             
     </body>
