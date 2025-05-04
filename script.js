@@ -1,22 +1,13 @@
-const langSelector = document.getElementById('languageSwitcher');
-
-langSelector.addEventListener('change', (e) => {
-  const lang = e.target.value;
-  loadTranslations(lang);
-});
-
-function loadTranslations(lang) {
+document.getElementById('languageSwitcher').addEventListener('change', function () {
+  const lang = this.value;
   fetch(`lang/${lang}.json`)
     .then(res => res.json())
     .then(translations => {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
+      document.querySelectorAll('[data-i18n]').forEach(elem => {
+        const key = elem.getAttribute('data-i18n');
         if (translations[key]) {
-          el.textContent = translations[key];
+          elem.textContent = translations[key];
         }
       });
     });
-}
-
-// Carica lingua predefinita all'avvio
-loadTranslations('it');
+});

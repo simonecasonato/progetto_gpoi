@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h3 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #2e7d32;
+  }
+  
+ 
+  table {
+    width: 85%;
+    max-width: 950px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1);
+  }
+  
+
+  th {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+    padding: 12px;
+    font-size: 15px;
+  }
+  
+
+  td {
+    border: 1px solid #c8e6c9;
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+
+  tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+ 
+  .tabella-allenamenti {
+    border: 2px solid #81c784;
+    background-color: #ffffff;
+  }
+  
+  
+  .tabella-prezzi {
+    border: 2px solid #66bb6a;
+    background-color: #ffffff;
+  }
+  
+
+  .tabella-prezzi span,
+  .tabella-allenamenti span {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 4px;
+  }
+  
+
+  td:contains("✓") {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  td:contains("✕") {
+    color: #c62828;
+    font-weight: bold;
+  }
+  

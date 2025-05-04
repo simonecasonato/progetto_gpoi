@@ -1,13 +1,17 @@
 body{
-    background-color: rgb(53, 122, 53);
+    background: linear-gradient(to bottom, #003300, #1f6b24, #38993d);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
 }
 
 nav{
-    background-color: rgb(67, 155, 67);
+    background-color: #2e7d32;
 }
 
 .card{
-    background-color: rgb(67, 155, 67);
+    background-color: #2e7d32;
     color: white;
 }
 
@@ -17,7 +21,7 @@ nav{
 }
 
 .list-group-item{
-    background-color: rgb(67, 155, 67);
+    background-color: #2e7d32;
     color: white;
 }
 
@@ -27,3 +31,8 @@ p{
 h2{
     color: white;
 }
+
+label{
+    color: white;
+}
+

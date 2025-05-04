@@ -18,26 +18,30 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav d-flex ">
+        <ul class="navbar-nav ms-auto d-lg-flex flex-column flex-lg-row">
 
-          <div class="d-flex ">
+          
             <li class="nav-item">
-              <a class="nav-link " href="#home">Home</a>
+              <a class="nav-link" href="#home" data-i18n="navHome">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#servizi">Servizi</a>
+              <a class="nav-link" href="#servizi" data-i18n="navServizi">Servizi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutUs">Chi siamo</a>
+              <a class="nav-link" href="#aboutUs"  data-i18n="navChiSiamo">Chi siamo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contatti" data-i18n="navContatti">Contatti</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recensioni</a>
+              <a class="nav-link" href="#" data-i18n="navRecensioni">Recensioni</a>
             </li>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="piano.html" data-i18n="navEsercizi">Piani esercizi</a>
+            </li>
+          
 
         </ul>
         <div class="d-flex ">
@@ -49,8 +53,8 @@
             </select>
           </div>
           <form class="container-fluid justify-content-start ">
-            <a href="register.html" class="btn btn-outline-light">Registrati</a>
-            <a href="login.html" class="btn btn-outline-light">Accedi</a>
+            <a href="register.html" class="btn btn-outline-light" data-i18n="btnRegistrati">Registrati</a>
+            <a href="login.html" class="btn btn-outline-light" data-i18n="btnAccedi">Accedi</a>
           </form>
         </div>
 
@@ -63,9 +67,9 @@
       <div class="container ">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">Chi siamo</h2>
+            <h2 class="card-title"  data-i18n="chiSiamoTitolo">Chi siamo</h2>
             <div>
-              <p class="text-center">GPTrainer e' una palestra innovativa che unisce intelligenza artificiale,
+              <p class="text-center" data-i18n="chiSiamoTesto">GPTrainer e' una palestra innovativa che unisce intelligenza artificiale,
                 allenamento fisico e
                 benessere personale. Fondata con l'obiettivo di rivoluzionare il mondo del fitness, GPTrainer
                 offre un'esperienza unica, grazie a programmi di allenamento personalizzati monitorati da
@@ -89,7 +93,7 @@
           <img src="/imgs/foto1.png" class="card-img-top rounded" alt="">
           <div class="card-body">
             <h5 class="card-title">Maria</h5>
-            <p class="card-text">Specializzata in CrossFit, Maria
+            <p class="card-text" data-i18n="mariaTesto">Specializzata in CrossFit, Maria
               motiva i suoi clienti a superare
               ogni limite con allenamenti ad alta
               intensita' che combinano
@@ -107,7 +111,7 @@
           <img src="/imgs/foto2.png" class="card-img-top rounded" alt="...">
           <div class="card-body">
             <h5 class="card-title">Antonio</h5>
-            <p class="card-text">Esperto di powerlifting,
+            <p class="card-text" data-i18n="antonioTesto">Esperto di powerlifting,
               Antonio e' specializzato nel
               miglioramento della forza
               massimale, concentrandosi su
@@ -126,7 +130,7 @@
           <img src="/imgs/foto3.png" class="card-img-top rounded" alt="...">
           <div class="card-body">
             <h5 class="card-title">Susanna</h5>
-            <p class="card-text">Insegnante di yoga, Susanna guida
+            <p class="card-text" data-i18n="susannaTesto">Insegnante di yoga, Susanna guida
               i suoi clienti in pratiche che
               migliorano la flessibilita', la forza e
               il benessere mentale. Con una
@@ -145,7 +149,7 @@
           <img src="/imgs/foto4.png" class="card-img-top rounded" alt="...">
           <div class="card-body">
             <h5 class="card-title">Alberto</h5>
-            <p class="card-text">Con oltre 10 anni di esperienza nel
+            <p class="card-text" data-i18n="albertoTesto">Con oltre 10 anni di esperienza nel
               bodybuilding, Alberto aiuta i suoi clienti a
               costruire massa muscolare e forza con un
               approccio tecnico e motivante. E' esperto
@@ -162,7 +166,7 @@
       </div>
 
       <div id="contatti" class="container mt-2">
-        <h2>Contatti</h2>
+        <h2 data-i18n="contattiTitolo">Contatti</h2>
         <ul class="list-group list-group-flush rounded text-center">
           <li class="list-group-item">+39 451 659 8575</li>
           <li class="list-group-item">www.GPTrainer.com</li>
@@ -174,11 +178,19 @@
     </div>
 
     <footer class="text-center mt-4">
-      <p>&copy; 2025 GPTrainer. Tutti i diritti riservati.</p>
+      <p data-i18n="diritti">&copy; 2025 GPTrainer. Tutti i diritti riservati.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz4fnFO9gybB+8e5c5d"></script>
-      <script src="script.js"></script>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
 </body>
 
 </html>
