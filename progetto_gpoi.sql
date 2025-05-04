@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 04, 2025 alle 18:04
+-- Creato il: Mag 04, 2025 alle 18:37
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -136,17 +136,14 @@ INSERT INTO `possiede` (`ID_coach`, `ID_tariffa`) VALUES
 CREATE TABLE `prenota` (
   `ID_utente` int(11) NOT NULL,
   `ID_coach` int(11) NOT NULL,
-  `data_prenotazione` date NOT NULL
+  `data_prenotazione` date NOT NULL,
+  `ID_tariffa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `prenota`
 --
 
-INSERT INTO `prenota` (`ID_utente`, `ID_coach`, `data_prenotazione`) VALUES
-(2, 1, '0000-00-00'),
-(2, 2, '2025-05-10'),
-(2, 2, '2025-08-06');
 
 -- --------------------------------------------------------
 
@@ -166,11 +163,7 @@ CREATE TABLE `recensione` (
 -- Dump dei dati per la tabella `recensione`
 --
 
-INSERT INTO `recensione` (`ID_recensione`, `testo`, `valutazione`, `ID_utente`, `id_coach`) VALUES
-(1, 'bhsshshs', 0, 2, 1),
-(2, '11', 1, 2, 1),
-(3, '11', 1, 2, 1),
-(4, '11', 1, 2, 1);
+
 
 -- --------------------------------------------------------
 
@@ -225,11 +218,7 @@ CREATE TABLE `utente` (
 -- Dump dei dati per la tabella `utente`
 --
 
-INSERT INTO `utente` (`ID_utente`, `email`, `nome`, `cognome`, `pwd`) VALUES
-(2, 'ciao@gmail.com', 'toni', 'baro', '202cb962ac59075b964b07152d234b70'),
-(3, 'ciao2@gmail.com', 'toni', 'baro', '202cb962ac59075b964b07152d234b70'),
-(4, 'ciao3@gmail.com', 'piipo', 'diao', '202cb962ac59075b964b07152d234b70'),
-(5, 'alessio@gmail.com', 'alessio', 'alessio', 'd2462e55381a20059ed811cefd42493e');
+
 
 --
 -- Indici per le tabelle scaricate
@@ -253,7 +242,8 @@ ALTER TABLE `possiede`
 --
 ALTER TABLE `prenota`
   ADD PRIMARY KEY (`ID_utente`,`ID_coach`,`data_prenotazione`),
-  ADD KEY `id_coach.prenotazione` (`ID_coach`);
+  ADD KEY `id_coach.prenotazione` (`ID_coach`),
+  ADD KEY `id_tariffa.prenotazione` (`ID_tariffa`);
 
 --
 -- Indici per le tabelle `recensione`
@@ -319,6 +309,7 @@ ALTER TABLE `possiede`
 --
 ALTER TABLE `prenota`
   ADD CONSTRAINT `id_coach.prenotazione` FOREIGN KEY (`ID_coach`) REFERENCES `coach_ia` (`ID_coach`),
+  ADD CONSTRAINT `id_tariffa.prenotazione` FOREIGN KEY (`ID_tariffa`) REFERENCES `tariffa` (`ID_tariffa`),
   ADD CONSTRAINT `id_utente.prenotazione` FOREIGN KEY (`ID_utente`) REFERENCES `utente` (`ID_utente`);
 
 --
