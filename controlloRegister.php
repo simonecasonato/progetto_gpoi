@@ -33,7 +33,7 @@ if(isset($_POST['invio'])) {
                         
                         echo"<h2 style='color:white;'>Registrazione avvenuta con successo</h2>";
                         echo"<h3 style='color:white;'>Benvenuto $nome $cognome</h3>";
-                        echo"<h4 style='color:white;'>Clicca per accedere <a href='index.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
+                        echo"<h4 style='color:white;'>Clicca per accedere <a href='login.html' class='link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>accedi</a></h4>";
                     }
                 }
             }
